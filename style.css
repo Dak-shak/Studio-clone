@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* Fixed Navigation */
+nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgb(192, 190, 190);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    gap: 20px;
+}
+
+/* Navigation Links */
+nav div {
+    padding: 5px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: gray;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 3px 5px;
+}
+/* General Reset */
+
+/* Centered Content */
+.content {
+    text-align: center;
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.buttons button:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* image items */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensures two columns */
+    gap: 15px;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* Image & Video Styling */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.grid-item img, 
+.grid-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+
+.grid-item:hover img, 
+.grid-item:hover video {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+
+
+/* Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    width: 90%;
+}
+
+/* Large Text Links */
+footer div:first-child,
+footer div:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+footer div:first-child a,
+footer div:nth-child(2) a {
+    text-decoration: none;
+    color: rgb(83, 82, 82);
+    transition: opacity 0.3s ease;
+}
+
+footer div:first-child a:hover,
+footer div:nth-child(2) a:hover {
+    opacity: 0.6;
+}
+
+
+footer div:last-child {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+footer div img {
+    width: 20px; 
+    justify-content: center;  
+}
+footer div span{
+    font-size: 15px;
+}
+
+footer div:last-child div {
+    display: flex;
+    gap: 6px; 
+}
+
+footer div:last-child a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+footer div:last-child a:hover {
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer div:last-child {
+        flex-direction: column;
+        gap: 5px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; 
+    }
+}
